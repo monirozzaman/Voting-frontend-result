@@ -1,6 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {Todo} from 'app/todo/models/todo';
 import {BackendService} from '../../services/backend.service';
 import {ReduxService} from '../../services/redux.service';
 
@@ -12,13 +11,7 @@ import {ReduxService} from '../../services/redux.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VoteComponent implements OnInit {
-  /**
-   * Observable list of todo
-   */
-  todos: Observable<Todo[]>;
-  // @Input() data: Todo[];
-  // voteListForChittagong = new Array<Todo>();
-  // voteListForDhaka = new Array<Todo>();
+
 
   constructor(private backendService: BackendService,
               private reduxService: ReduxService) {
